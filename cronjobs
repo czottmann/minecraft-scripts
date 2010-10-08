@@ -1,0 +1,3 @@
+0 * * * * nice -n 20 /var/minecraft-scripts/backup.sh
+* * * * * /var/minecraft-scripts/generate_www.sh 
+30 7 * * * cd /var/minecraft-overviewer && python2.7 gmap.py /var/minecraft/world/ /var/www/mumorpuger.com/map/

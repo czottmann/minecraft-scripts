@@ -1,3 +1,4 @@
 0 * * * * nice -n 20 /var/minecraft-scripts/backup.sh
 * * * * * /var/minecraft-scripts/generate_www.sh 
-30 7 * * * cd /var/minecraft-overviewer && python2.7 gmap.py /var/minecraft/world/ /var/www/mumorpuger.com/map/
+30 7 * * * cd /var/minecraft-overviewer && /usr/local/bin/python2.7 gmap.py /var/minecraft/world/ /var/www/mumorpuger.com/map/
+0 0,6,12,18 * * * /etc/init.d/minecraft restart 2>&1 >/dev/null

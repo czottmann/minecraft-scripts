@@ -6,7 +6,7 @@ THEDATE=`date +%Y%m%d-%H%M`
 
 cd /var
 tar czpf minecraft-backups/minecraft.$THEDATE.game.tgz minecraft --exclude=world
-tar czpf minecraft-backups/minecraft.$THEDATE.world.tgz minecraft/world
+tar czpf minecraft-backups/minecraft.$THEDATE.world.tgz minecraft/world --exclude=*.png
 
 # remove old backups, anything over a day old
 find minecraft-backups -type f -mtime +1 -exec rm -f '{}' \;
